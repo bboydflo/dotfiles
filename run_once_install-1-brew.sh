@@ -7,16 +7,14 @@ function installHomebrew() {
     echo "==================================="
     echo "                                   "
 
-    # cd ~/
+    cd ~/
 
-    # which -s brew > /dev/null
-    # if [[ $? -eq 1 ]]; then
-    #     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    # else
-    #     brew upgrade
-    # fi
-
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    which -s brew > /dev/null
+    if [[ $? -eq 1 ]]; then
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    else
+        brew upgrade
+    fi
 }
 
 function installHomebrewPackages() {
@@ -29,4 +27,4 @@ function installHomebrewPackages() {
     brew update
 }
 
-installHomebrew
+# installHomebrew
