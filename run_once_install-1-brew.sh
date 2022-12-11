@@ -25,4 +25,31 @@ function installHomebrewPackages() {
     brew update
 }
 
+function setupFishShell() {
+
+    echo "==================================="
+    echo "Setup Fish Shell"
+    echo "==================================="
+    echo "                                   "
+
+    goHome
+
+    # add fish to the list of installed shells
+    echo $(which fish) | sudo tee -a /etc/shells
+
+    # make fish the default shell
+    chsh -s $(which fish)
+}
+
+function setBetterMacDefaults() {
+
+    echo "==================================="
+    echo "Set better MacOS defaults"
+    echo "==================================="
+    echo "                                   "
+
+    source ~/.config/dotfiles/scripts/config-macos.sh
+}
+
 installHomebrew
+installHomebrewPackages
