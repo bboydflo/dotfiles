@@ -63,11 +63,13 @@ if status is-interactive
     # git path
     set GIT_PATH (which git)
 
-    # miscellaneous abbreviations and aliases
-    alias j z
-    # abbr -a tmux "tmux -f $CONFIG_PATH/tmux/tmux.conf"
-    # abbr -ag tmux "tmux -f $CONFIG_PATH/tmux/tmux.conf"
-    alias tmux "tmux -f $CONFIG_PATH/tmux/tmux.conf"
+    if type -q z
+        # miscellaneous abbreviations and aliases
+        alias j z
+        # abbr -a tmux "tmux -f $CONFIG_PATH/tmux/tmux.conf"
+        # abbr -ag tmux "tmux -f $CONFIG_PATH/tmux/tmux.conf"
+        alias tmux "tmux -f $CONFIG_PATH/tmux/tmux.conf"
+    end
 
     # dotfiles configuration
     alias dotfiles "$GIT_PATH --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
