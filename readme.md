@@ -11,7 +11,7 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/.local/bin
 ## Sync dotfiles using chezmoi on a new system
 
 ```sh
-chezmoi init --apply bboydflo
+~/.local/bin/chezmoi init --apply bboydflo
 ```
 
 Restart terminal, open Alacritty and continue the process
