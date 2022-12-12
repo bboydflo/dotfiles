@@ -5,7 +5,7 @@ On a new system start by installing `xcode-tools` and `chezmoi`
 ```sh
 xcode-select --install
 
-sh -c "$(curl -fsLS get.chezmoi.io)" -- -b /usr/local/bin
+sh -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/.local/bin
 ```
 
 ## Sync dotfiles using chezmoi on a new system
