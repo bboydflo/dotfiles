@@ -20,6 +20,7 @@ function installHomebrewPackages() {
     echo "=================================="
     echo "Installing homebrew packages:"
     echo "=================================="
+    brew upgrade
     brew bundle install ~/Brewfile
 
     brew update
@@ -31,8 +32,6 @@ function setupFishShell() {
     echo "Setup Fish Shell"
     echo "==================================="
     echo "                                   "
-
-    goHome
 
     # add fish to the list of installed shells
     echo $(which fish) | sudo tee -a /etc/shells
