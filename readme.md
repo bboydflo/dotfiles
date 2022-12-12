@@ -27,6 +27,8 @@ fisher update
 
 # open tmux using tat
 tat
+
+# install tmp pluginx using CMD + b + SHIFT + i
 ```
 
 ## Daily commands
