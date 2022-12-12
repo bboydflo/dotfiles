@@ -11,8 +11,12 @@ sh -c "$(curl -fsLS get.chezmoi.io)"
 ## Sync dotfiles using chezmoi on a new system
 
 ```sh
-chezmoi init --apply bboydflo
+./bin/chezmoi init --apply bboydflo
+```
 
+Restart terminal (alacritty) and continue the process
+
+```sh
 # show fisher commands
 fisher
 # install plugins
