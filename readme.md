@@ -5,16 +5,16 @@ On a new system start by installing `xcode-tools` and `chezmoi`
 ```sh
 xcode-select --install
 
-sh -c "$(curl -fsLS get.chezmoi.io)"
+sh -c "$(curl -fsLS get.chezmoi.io)" -- -b /usr/local/bin
 ```
 
 ## Sync dotfiles using chezmoi on a new system
 
 ```sh
-./bin/chezmoi init --apply bboydflo
+chezmoi init --apply bboydflo
 ```
 
-Restart terminal (alacritty) and continue the process
+Restart terminal, open Alacritty and continue the process
 
 ```sh
 # show fisher commands
@@ -22,8 +22,11 @@ fisher
 # install plugins
 fisher update
 
-# configure tide
-tide configure
+# configure tide should start imediately
+# tide configure
+
+# open tmux using tat
+tat
 ```
 
 ## Daily commands
