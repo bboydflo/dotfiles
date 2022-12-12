@@ -20,7 +20,6 @@ function installHomebrewPackages() {
     echo "=================================="
     echo "Installing homebrew packages:"
     echo "=================================="
-    brew upgrade
     brew bundle install ~/Brewfile
 
     brew update
