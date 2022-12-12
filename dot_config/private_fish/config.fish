@@ -60,9 +60,6 @@ if status is-interactive
         alias cat "bat --color=always --style=numbers"
     end
 
-    # git path
-    set GIT_PATH (which git)
-
     if type -q z
         # miscellaneous abbreviations and aliases
         alias j z
@@ -70,17 +67,4 @@ if status is-interactive
         # abbr -ag tmux "tmux -f $CONFIG_PATH/tmux/tmux.conf"
         alias tmux "tmux -f $CONFIG_PATH/tmux/tmux.conf"
     end
-
-    # dotfiles configuration
-    alias dotfiles "$GIT_PATH --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
-    dotfiles config --local status.showUntrackedFiles no
-    dotfiles config --local user.name "Florin Onciu"
-    dotfiles config --local user.email "cosmin.onciu@gmail.com"
 end
-
-
-if type -q bass
-    # source /opt/homebrew/opt/asdf/libexec/asdf.fish
-    bass "source $(brew --prefix asdf)/libexec/asdf.sh"
-end
-
