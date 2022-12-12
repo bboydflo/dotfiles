@@ -1,5 +1,27 @@
 # Getting started with chezmoi
 
+On a new system start by installing `xcode-tools` and `chezmoi`
+
+```sh
+xcode-select --install
+
+sh -c "$(curl -fsLS get.chezmoi.io)"
+```
+
+## Sync dotfiles using chezmoi on a new system
+
+```sh
+chezmoi init --apply bboydflo
+
+# show fisher commands
+fisher
+# install plugins
+fisher update
+
+# configure tide
+tide configure
+```
+
 ## Daily commands
 
 ```sh
@@ -20,18 +42,4 @@ chezmoi apply
 
 # opens a subshell in the source directory.
 chezmoi cd
-```
-
-## chezmoi on a new system
-
-```sh
-chezmoi init --apply bboydflo
-
-# show fisher commands
-fisher
-# install plugins
-fisher update
-
-# configure tide
-tide configure
 ```
