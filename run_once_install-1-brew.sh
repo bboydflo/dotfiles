@@ -53,3 +53,5 @@ function setBetterMacDefaults() {
 
 installHomebrew
 installHomebrewPackages
+setupFishShell
+setBetterMacDefaults
