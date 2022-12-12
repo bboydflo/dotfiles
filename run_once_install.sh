@@ -10,6 +10,8 @@ function installHomebrew() {
     which -s brew > /dev/null
     if [[ $? -eq 1 ]]; then
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+        cd && eval "$(/opt/homebrew/bin/brew shellenv)"
     else
         brew upgrade
     fi
