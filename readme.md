@@ -26,4 +26,12 @@ chezmoi cd
 
 ```sh
 chezmoi init --apply bboydflo
+
+# show fisher commands
+fisher
+# install plugins
+fisher update
+
+# configure tide
+tide configure
 ```
