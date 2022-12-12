@@ -49,4 +49,7 @@ chezmoi apply
 
 # opens a subshell in the source directory.
 chezmoi cd
+
+# on a new system sync config files with github repo
+chezmoi update
 ```
