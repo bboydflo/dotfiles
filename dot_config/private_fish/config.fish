@@ -25,11 +25,11 @@ if status is-interactive
         set -gx PATH "$VOLTA_HOME/bin" $PATH
     end
 
-    # exa setup
-    if type -q exa
-        # abbr -a ll "exa -lg --icons"
-        # abbr -a lla "exa -lga --icons # ll -a"
-        alias ll "exa -lg --icons"
+    # eza setup
+    if type -q eza
+        # abbr -a ll "eza -lg --icons"
+        # abbr -a lla "eza -lga --icons # ll -a"
+        alias ll "eza -lg --icons"
         alias lla "ll -a"
     end
 
