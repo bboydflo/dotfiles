@@ -52,7 +52,19 @@ function setBetterMacDefaults() {
     source ~/.config/dotfiles/scripts/config-macos.sh
 }
 
+function prepareForDevelopment() {
+
+    echo "==================================="
+    echo "Prepare for development"
+    echo "==================================="
+    echo "                                   "
+
+    echo "create ~/development folder"
+    mkdir "$HOME"/development
+}
+
 installHomebrew
 installHomebrewPackages
 setupFishShell
 setBetterMacDefaults
+prepareForDevelopment
