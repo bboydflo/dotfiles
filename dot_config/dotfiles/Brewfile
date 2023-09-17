@@ -6,7 +6,6 @@ tap "nvie/tap"
 brew "bat"
 brew 'coreutils' # Those that come with macOS are outdated
 brew "chezmoi"
-brew "qlmarkdown"
 brew "diff-so-fancy"
 brew "eza"
 brew "fd"
