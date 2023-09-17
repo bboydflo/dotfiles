@@ -1,5 +1,11 @@
 # Getting started with chezmoi
 
+Generate a new public and private SSH key by running:
+
+```sh
+curl https://raw.githubusercontent.com/bboydflo/dotfiles/main/dot_config/dotfiles/scripts/ssh.sh | sh -s "<your-email-address>"
+```
+
 On a new system start by installing `xcode-tools` and `chezmoi`
 
 ```sh

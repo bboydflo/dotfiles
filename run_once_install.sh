@@ -7,11 +7,12 @@ function installHomebrew() {
     echo "==================================="
     echo "                                   "
 
-    which -s brew > /dev/null
-    if [[ $? -eq 1 ]]; then
+    # Check for Homebrew and install if we don't have it
+    if test ! "$(which brew)"; then
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-        cd && eval "$(/opt/homebrew/bin/brew shellenv)"
+        echo "eval $(/opt/homebrew/bin/brew shellenv)" >> "$HOME/.zprofile"
+        eval "$(/opt/homebrew/bin/brew shellenv)"
     else
         brew upgrade
     fi
@@ -22,7 +23,7 @@ function installHomebrewPackages() {
     echo "=================================="
     echo "Installing homebrew packages:"
     echo "=================================="
-    brew bundle install ~/Brewfile
+    brew bundle install "$HOME/.config/dotfiles/Brewfile"
 
     brew update
 }
