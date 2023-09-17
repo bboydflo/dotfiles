@@ -31,6 +31,73 @@ tat
 # install tmp pluginx using CMD + b + SHIFT + i
 ```
 
+## Brew daily commands
+
+- Install the latest stable version of a formula or cask (use `--devel` for development versions):
+
+```sh
+brew install formula
+```
+
+- List all installed formulae and casks:
+
+```sh
+brew list
+```
+
+- Upgrade an installed formula or cask (if none is given, all installed formulae/casks are upgraded):
+
+```sh
+brew upgrade formula
+```
+
+- Fetch the newest version of Homebrew and of all formulae and casks from the Homebrew source repository:
+
+```sh
+brew update
+```
+
+- Show formulae and casks that have a more recent version available:
+
+```sh
+brew outdated
+```
+
+- Search for available formulae (i.e. packages) and casks (i.e. native packages):
+
+```sh
+brew search text
+```
+
+- Display information about a formula or a cask (version, installation path, dependencies, etc.):
+
+```sh
+brew info formula
+```
+
+- Check the local Homebrew installation for potential problems:
+
+```sh
+brew doctor
+```
+
+- Dump all currently installed packages into a `BrewFile`
+
+```sh
+cd && brew bundle dump
+```
+
+- Add/remove a tap
+
+```sh
+# install package from a specific tap
+brew tap nvie/tap
+brew install nvie/tap/git-toolbelt
+
+# remove tap
+brew untap nvie/tap
+```
+
 ## Daily commands
 
 ```sh
@@ -50,7 +117,11 @@ chezmoi diff
 chezmoi apply
 
 # opens a subshell in the source directory.
+# then do git commits as usual to update local config with remote
 chezmoi cd
+
+# go back to previous folder (before `chezmoi cd`)
+exit
 
 # on a new system sync config files with github repo
 chezmoi update
