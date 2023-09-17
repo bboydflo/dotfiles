@@ -35,11 +35,16 @@ function setupFishShell() {
     echo "==================================="
     echo "                                   "
 
-    # add fish to the list of installed shells
-    echo $(which fish) | sudo tee -a /etc/shells
+    fish_path=$(which fish)
+
+    # checks if fish is already added to the list of installed shells
+    if test ! "grep -R $fish_path /etc/shells"; then
+        # add fish to the list of installed shells
+        echo "$fish_path" | sudo tee -a /etc/shells
+    fi
 
     # make fish the default shell
-    chsh -s $(which fish)
+    chsh -s "$fish_path"
 }
 
 function setBetterMacDefaults() {
