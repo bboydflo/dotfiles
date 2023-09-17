@@ -1,12 +1,12 @@
+# finish fish installation
+eval (/opt/homebrew/bin/brew shellenv)
+
 # clear welcome text
 set -g fish_greeting
 
 # language
 set -x LANG en_US.UTF-8
 set -x LC_ALL en_US.UTF-8
-
-# finish fish installation
-eval (/opt/homebrew/bin/brew shellenv)
 
 # .config path
 set -x CONFIG_PATH ~/.config
@@ -47,12 +47,6 @@ if status is-interactive
         alias f "find * -type f | fzf"
     end
 
-    # if bass fish plugin available
-    if type -q bass
-        # abbr -a tat "bass $CONFIG_PATH/fish/custom-scripts/tmux-tat.sh"
-        alias tat "bass $CONFIG_PATH/fish/custom-scripts/tmux-tat.sh"
-    end
-
     # if bat is available
     if type -q bat
         # abbr -a -g cat "bat --color=always --style=numbers"
@@ -63,8 +57,18 @@ if status is-interactive
     if type -q z
         # miscellaneous abbreviations and aliases
         alias j z
+    end
+
+    if type -q tmux
+        alias j z
         # abbr -a tmux "tmux -f $CONFIG_PATH/tmux/tmux.conf"
         # abbr -ag tmux "tmux -f $CONFIG_PATH/tmux/tmux.conf"
         alias tmux "tmux -f $CONFIG_PATH/tmux/tmux.conf"
+
+        # if bass fish plugin available
+        if type -q bass
+            # abbr -a tat "bass $CONFIG_PATH/fish/custom-scripts/tmux-tat.sh"
+            alias tat "bass $CONFIG_PATH/fish/custom-scripts/tmux-tat.sh"
+        end
     end
 end
