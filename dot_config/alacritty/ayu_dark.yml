@@ -1,5 +1,4 @@
-# Colors (Ayu Dark)
-# background_opacity: 0.96
+# Colors (Ayu Dark) https://github.com/alacritty/alacritty-theme/blob/master/themes/ayu_dark.yaml
 colors:
   # Default colors
   primary:
