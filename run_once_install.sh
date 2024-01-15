@@ -52,7 +52,7 @@ function setBetterMacDefaults() {
     echo "==================================="
     echo "                                   "
 
-    source ~/.config/dotfiles/scripts/config-macos.sh
+    source ~/.config/dotfiles/scripts/config-macos.sh > /dev/null 2>&1
 }
 
 function prepareForDevelopment() {

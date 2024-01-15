@@ -14,15 +14,6 @@ set -x CONFIG_PATH ~/.config
 # Commands to run in interactive sessions can go here
 if status is-interactive
 
-    # beware this runs for each new open terminal
-    # switch (uname)
-    #     case Darwin
-    #         set host_config $CONFIG_PATH/dotfiles/scripts/config-macos.sh
-    #         test -r $host_config; and source $host_config
-    #     case '*'
-    #         echo 'TODO: Load '(uname)' specific configuration here!'
-    # end
-
     # volta setup
     if type -q volta
         set -gx VOLTA_HOME "$HOME/.volta"
