@@ -1,0 +1,179 @@
+import = ["/Users/dkFloOnc/.config/alacritty/ayu_dark.toml"]
+live_config_reload = true
+
+[cursor.style]
+shape = "Beam"
+
+[env]
+TERM = "screen-256color"
+
+[font]
+size = 14.0
+
+[font.bold]
+family = "JetBrainsMono Nerd Font Mono"
+style = "Bold"
+
+[font.bold_italic]
+family = "JetBrainsMono Nerd Font Mono"
+style = "Bold Italic"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font Mono"
+style = "Italic"
+
+[font.normal]
+family = "JetBrainsMono Nerd Font Mono"
+style = "Regular"
+
+[[keyboard.bindings]]
+chars = "\u0002d"
+key = "D"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0002$"
+key = "Period"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0002,"
+key = "Comma"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00021"
+key = "Key1"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00022"
+key = "Key2"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00023"
+key = "Key3"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00024"
+key = "Key4"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00025"
+key = "Key5"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00026"
+key = "Key6"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00027"
+key = "Key7"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00028"
+key = "Key8"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00029"
+key = "Key9"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0002["
+key = "LBracket"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0002n"
+key = "Right"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u0002p"
+key = "Left"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u0002-"
+key = "Backslash"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u0002\\"
+key = "Backslash"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0002c"
+key = "T"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0002x"
+key = "W"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0002\u001B[C"
+key = "Right"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0002\u001B[D"
+key = "Left"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0002\u001B[A"
+key = "Up"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0002\u001B[B"
+key = "Down"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0002j"
+key = "J"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0002l"
+key = "L"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0002b"
+key = "B"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0002z"
+key = "Z"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0002R"
+key = "R"
+mods = "Command"
+
+[mouse]
+hide_when_typing = true
+
+[window]
+decorations = "full"
+opacity = 0.95
+startup_mode = "SimpleFullscreen"
+
+[window.padding]
+x = 16
+y = 4
