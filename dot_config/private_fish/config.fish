@@ -14,10 +14,14 @@ set -x CONFIG_PATH ~/.config
 # Commands to run in interactive sessions can go here
 if status is-interactive
 
-    # https://stackoverflow.com/a/48750830/1597360
-    # Fish shell; import config into main config based on the current hostname
-    set host_config $CONFIG_PATH/fish/config-(hostname).fish
-    test -r $host_config; and source $host_config
+    # beware this runs for each new open terminal
+    # switch (uname)
+    #     case Darwin
+    #         set host_config $CONFIG_PATH/dotfiles/scripts/config-macos.sh
+    #         test -r $host_config; and source $host_config
+    #     case '*'
+    #         echo 'TODO: Load '(uname)' specific configuration here!'
+    # end
 
     # volta setup
     if type -q volta
@@ -54,13 +58,13 @@ if status is-interactive
         alias cat "bat --color=always --style=numbers"
     end
 
-    if type -q z
-        # miscellaneous abbreviations and aliases
-        alias j z
+    # if zoxide is available
+    if type -q zoxide
+        zoxide init fish | source
+        abbr j z
     end
 
     if type -q tmux
-        alias j z
         # abbr -a tmux "tmux -f $CONFIG_PATH/tmux/tmux.conf"
         # abbr -ag tmux "tmux -f $CONFIG_PATH/tmux/tmux.conf"
         alias tmux "tmux -f $CONFIG_PATH/tmux/tmux.conf"

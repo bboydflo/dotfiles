@@ -895,7 +895,7 @@ key_bindings:
   - { key: Right   ,       mods: Command|Shift,  chars: "\x02\x6e"                         }
   - { key: Left    ,       mods: Command|Shift,  chars: "\x02\x70"                         }
   # Split tmux panes (horizontally: 022d = Prefix + -, or vartically: 025c = Prefix + \)
-  - { key: Backslash,      mods: Command|Shift,  chars: "\x02\x2d"                         }
+  - { key: Backslash,      mods: Command|Option,  chars: "\x02\x2d"                         }
   - { key: Backslash,      mods: Command,        chars: "\x02\x5c"                         }
   # Create a new tmux window
   - { key: T,              mods: Command,        chars: "\x02\x63"                         }

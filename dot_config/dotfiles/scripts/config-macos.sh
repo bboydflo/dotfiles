@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # ==================================================================================
 #
 # check https://raw.githubusercontent.com/joshmedeski/dotfiles/master/install/osx.sh
@@ -199,4 +201,4 @@ defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
 # echo "0x08000100:0" > ~/.CFUserTextEncoding
 
 echo "Kill affected applications"
-for app in Safari Finder Dock Mail SystemUIServer; do killall "$app" >/dev/null 2>&1; done
+for app in Safari Finder Dock Mail SystemUIServer; do killall "$app" >/dev/null 2>&1; done;
