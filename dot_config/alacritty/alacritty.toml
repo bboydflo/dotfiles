@@ -36,141 +36,169 @@ style = "Italic"
 family = "JetBrainsMono Nerd Font Mono"
 style = "Regular"
 
+# tmux detach from session: Command + d => Prefix(Ctrl + b) + d
 [[keyboard.bindings]]
 chars = "\u0002d"
 key = "D"
 mods = "Command"
 
+# tmux rename session: Command + . => Prefix(Ctrl + b) + $
 [[keyboard.bindings]]
 chars = "\u0002$"
 key = "Period"
 mods = "Command"
 
+# tmux rename window: Command + , => Prefix(Ctrl + b) + ,
 [[keyboard.bindings]]
 chars = "\u0002,"
 key = "Comma"
 mods = "Command"
 
+# tmux switch/select window 1: Command + 1 => Prefix(Ctrl + b) + 1
 [[keyboard.bindings]]
 chars = "\u00021"
 key = "Key1"
 mods = "Command"
 
+# tmux switch/select window 2: Command + 2 => Prefix(Ctrl + b) + 2
 [[keyboard.bindings]]
 chars = "\u00022"
 key = "Key2"
 mods = "Command"
 
+# tmux switch/select window 3: Command + 3 => Prefix(Ctrl + b) + 3
 [[keyboard.bindings]]
 chars = "\u00023"
 key = "Key3"
 mods = "Command"
 
+# tmux switch/select window 4: Command + 4 => Prefix(Ctrl + b) + 4
 [[keyboard.bindings]]
 chars = "\u00024"
 key = "Key4"
 mods = "Command"
 
+# tmux switch/select window 5: Command + 5 => Prefix(Ctrl + b) + 5
 [[keyboard.bindings]]
 chars = "\u00025"
 key = "Key5"
 mods = "Command"
 
+# tmux switch/select window 6: Command + 6 => Prefix(Ctrl + b) + 6
 [[keyboard.bindings]]
 chars = "\u00026"
 key = "Key6"
 mods = "Command"
 
+# tmux switch/select window 7: Command + 7 => Prefix(Ctrl + b) + 7
 [[keyboard.bindings]]
 chars = "\u00027"
 key = "Key7"
 mods = "Command"
 
+# tmux switch/select window 8: Command + 8 => Prefix(Ctrl + b) + 8
 [[keyboard.bindings]]
 chars = "\u00028"
 key = "Key8"
 mods = "Command"
 
+# tmux switch/select window 9: Command + 9 => Prefix(Ctrl + b) + 9
 [[keyboard.bindings]]
 chars = "\u00029"
 key = "Key9"
 mods = "Command"
 
+# tmux copy mode window: Command + [ => Prefix(Ctrl + b) + [
 [[keyboard.bindings]]
 chars = "\u0002["
 key = "LBracket"
 mods = "Command"
 
+# tmux next window: Command + Shift + Right => Prefix(Ctrl + b) + n
 [[keyboard.bindings]]
 chars = "\u0002n"
 key = "Right"
 mods = "Command|Shift"
 
+# tmux previous window: Command + Shift + Left => Prefix(Ctrl + b) + p
 [[keyboard.bindings]]
 chars = "\u0002p"
 key = "Left"
 mods = "Command|Shift"
 
+# tmux split horizontally: Command + Option + \ => Prefix(Ctrl + b) + -
 [[keyboard.bindings]]
 chars = "\u0002-"
 key = "Backslash"
 mods = "Command|Option"
 
+# tmux split vertically: Command + \ => Prefix(Ctrl + b) + \
 [[keyboard.bindings]]
 chars = "\u0002\\"
 key = "Backslash"
 mods = "Command"
 
+# tmux create window: Command + T => Prefix(Ctrl + b) + c
 [[keyboard.bindings]]
 chars = "\u0002c"
 key = "T"
 mods = "Command"
 
+# tmux close current pane (and window if last pane): Command + W => Prefix(Ctrl + b) + x
 [[keyboard.bindings]]
 chars = "\u0002x"
 key = "W"
 mods = "Command"
 
+# tmux navigate to the right panel: Command + Right => Prefix(Ctrl + b) + Right
 [[keyboard.bindings]]
 chars = "\u0002\u001B[C"
 key = "Right"
 mods = "Command"
 
+# tmux navigate to the left panel: Command + Left => Prefix(Ctrl + b) + Left
 [[keyboard.bindings]]
 chars = "\u0002\u001B[D"
 key = "Left"
 mods = "Command"
 
+# tmux navigate to the up panel: Command + Up => Prefix(Ctrl + b) + Up
 [[keyboard.bindings]]
 chars = "\u0002\u001B[A"
 key = "Up"
 mods = "Command"
 
+# tmux navigate to the down panel: Command + Down => Prefix(Ctrl + b) + Down
 [[keyboard.bindings]]
 chars = "\u0002\u001B[B"
 key = "Down"
 mods = "Command"
 
+# tmux see session tree: Command + J => Prefix(Ctrl + b) + w / Prefix(Ctrl + b) + j
 [[keyboard.bindings]]
 chars = "\u0002j"
 key = "J"
 mods = "Command"
 
+# tmux toggle first active session: Command + L => Prefix(Ctrl + b) + l
 [[keyboard.bindings]]
 chars = "\u0002l"
 key = "L"
 mods = "Command"
 
+# tmux break current pane onto a new window: Command + B => Prefix(Ctrl + b) + b
 [[keyboard.bindings]]
 chars = "\u0002b"
 key = "B"
 mods = "Command"
 
+# tmux toggle zoom of current pane: Command + Z => Prefix(Ctrl + b) + z
 [[keyboard.bindings]]
 chars = "\u0002z"
 key = "Z"
 mods = "Command"
 
+# tmux reload configuration: Command + R => Prefix(Ctrl + b) + R
 [[keyboard.bindings]]
 chars = "\u0002R"
 key = "R"

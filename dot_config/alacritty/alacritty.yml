@@ -892,7 +892,9 @@ key_bindings:
   # Copy Mode
   - { key: LBracket,       mods: Command,        chars: "\x02\x5b"                         }
 
+  # Tmux next window
   - { key: Right   ,       mods: Command|Shift,  chars: "\x02\x6e"                         }
+  # Tmux previous window
   - { key: Left    ,       mods: Command|Shift,  chars: "\x02\x70"                         }
   # Split tmux panes (horizontally: 022d = Prefix + -, or vartically: 025c = Prefix + \)
   - { key: Backslash,      mods: Command|Option,  chars: "\x02\x2d"                         }
@@ -906,7 +908,7 @@ key_bindings:
   - { key: Left,           mods: Command,        chars: "\x02\x1b\x5b\x44"                 }
   - { key: Up,             mods: Command,        chars: "\x02\x1b\x5b\x41"                 }
   - { key: Down,           mods: Command,        chars: "\x02\x1b\x5b\x42"                 }
-  # Navigate to sessions, window or panes via a tree widgt (Prefix + j)
+  # Navigate to sessions, window or panes via a tree widget (Prefix + j)
   - { key: J,              mods: Command,        chars: "\x02\x6a"                         }
   # Go to the last tmux window (Prefix + l)
   - { key: L,              mods: Command,        chars: "\x02\x6c"                         }
