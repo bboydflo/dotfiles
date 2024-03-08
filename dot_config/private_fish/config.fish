@@ -11,8 +11,16 @@ set -x LC_ALL en_US.UTF-8
 # .config path
 set -x CONFIG_PATH ~/.config
 
+
 # Commands to run in interactive sessions can go here
 if status is-interactive
+    # pyenv setup
+    if type -q pyenv
+        set -Ux PYENV_VERSION "3.11"
+        set -Ux PYENV_ROOT "$HOME/.pyenv"
+        fish_add_path $PYENV_ROOT/bin
+        pyenv init - | source
+    end
 
     # volta setup
     if type -q volta
