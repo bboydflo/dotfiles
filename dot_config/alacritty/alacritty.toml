@@ -1,10 +1,10 @@
 # more on alacritty configuration docs here:
 # https://alacritty.org/config-alacritty.html
 
-import = ["~/.config/alacritty/ayu_dark.toml"]
-live_config_reload = true
+general.import = ["~/.config/alacritty/ayu_dark.toml"]
+general.live_config_reload = true
 
-[shell]
+[terminal.shell]
 program = "/opt/homebrew/bin/fish"
 
 [cursor.style]

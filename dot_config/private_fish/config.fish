@@ -11,12 +11,23 @@ set -x LC_ALL en_US.UTF-8
 # .config path
 set -x CONFIG_PATH ~/.config
 
-
 # Commands to run in interactive sessions can go here
 if status is-interactive
+    # jj setup
+    if type -q jj
+        jj util completion fish | source
+    end
+
+    # uv setup
+    if type -q uv
+        # uv setup
+        source $HOME/.cargo/env.fish
+        uv generate-shell-completion fish | source
+    end
+
     # pyenv setup
     if type -q pyenv
-        set -Ux PYENV_VERSION "3.11"
+        # set -Ux PYENV_VERSION "3.11"
         set -Ux PYENV_ROOT "$HOME/.pyenv"
         fish_add_path $PYENV_ROOT/bin
         pyenv init - | source
@@ -45,6 +56,7 @@ if status is-interactive
 
     # better find
     if type -q fzf
+        fzf --fish | source
         set -x FZF_DEFAULT_OPTS "--height 40% --layout=reverse --border"
         # abbr -a f "find * -type f | fzf"
         alias f "find * -type f | fzf"

@@ -6,3 +6,5 @@ export PATH=$PATH:$HOME/.local/bin
 
 # Set PATH, MANPATH, etc., for Homebrew.
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+. "$HOME/.cargo/env"
