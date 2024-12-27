@@ -11,11 +11,15 @@ background-opacity = 0.75
 background-blur-radius = 20
 
 working-directory = home
-macos-titlebar-style = hidden
-macos-non-native-fullscreen = true
 shell-integration = fish
 
-# padding
+# https://ghostty.org/docs/config/reference#window-decoration
+# disables the native tabs on macos
+macos-titlebar-style = hidden
+# macos fullscreen mode on in a new space
+macos-non-native-fullscreen = true
+
+# window
 window-padding-x = 16
 window-padding-y = 8
 
