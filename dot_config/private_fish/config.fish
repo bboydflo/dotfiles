@@ -47,12 +47,12 @@ if status is-interactive
         alias lla "ll -a"
     end
 
-    ## starship setup
-    # if type -q starship
-    #     set -x STARSHIP_CONFIG $CONFIG_PATH/starship/config.toml
-    #     init starship
-    #     starship init fish | source
-    # end
+    # starship setup
+    if type -q starship
+        set -x STARSHIP_CONFIG $CONFIG_PATH/starship/config.toml
+        # init starship
+        starship init fish | source
+    end
 
     # better find
     if type -q fzf

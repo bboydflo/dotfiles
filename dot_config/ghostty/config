@@ -15,6 +15,10 @@ macos-titlebar-style = hidden
 macos-non-native-fullscreen = true
 shell-integration = fish
 
+# padding
+window-padding-x = 16
+window-padding-y = 8
+
 # keybindings
 keybind = control+t=new_tab
 keybind = control+w=close_surface
@@ -46,9 +50,9 @@ keybind = command+shift+right=text:\x02\x6e
 keybind = command+shift+left=text:\x02\x70
 
 # [tmux] split vertically (Prefix(Ctrl + b) + \)
-keybind = command+backslash=text:\x02\x5c\x0a
+keybind = command+backslash=text:\x02\x5c
 # [tmux] split horizontally (Prefix(Ctrl + b) + -)
-keybind = command+option+backslash=text:\x02\x2d\x0a
+keybind = command+option+backslash=text:\x02\x2d
 
 # [tmux] create window (Prefix(Ctrl + b) + c)
 keybind = command+t=text:\x02\x63
@@ -78,7 +82,3 @@ keybind = command+d=text:\x02\x64\x0a
 keybind = command+r=text:\x02\x72\x0a
 # [tmux] copy mode window (Prefix(Ctrl + b) + [)
 keybind = command+left_bracket=text:\x02\x5b\x0a
-
-# padding
-window-padding-x = 16
-window-padding-y = 8
