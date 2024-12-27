@@ -1,0 +1,84 @@
+theme = ayu
+
+font-family = "JetBrainsMono Nerd Font Mono"
+font-size = 14
+
+cursor-style = block
+cursor-style-blink = false
+mouse-hide-while-typing = true
+
+background-opacity = 0.75
+background-blur-radius = 20
+
+working-directory = home
+macos-titlebar-style = hidden
+macos-non-native-fullscreen = true
+shell-integration = fish
+
+# keybindings
+keybind = control+t=new_tab
+keybind = control+w=close_surface
+keybind = control+n=next_tab
+keybind = control+p=previous_tab
+
+# [tmux] switch/select window 1 (Prefix(Ctrl + b) + 1)
+keybind = command+one=text:\x02\x31\x0a
+# [tmux] switch/select window 2 (Prefix(Ctrl + b) + 2)
+keybind = command+two=text:\x02\x32\x0a
+# [tmux] switch/select window 3 (Prefix(Ctrl + b) + 3)
+keybind = command+three=text:\x02\x33\x0a
+# [tmux] switch/select window 4 (Prefix(Ctrl + b) + 4)
+keybind = command+four=text:\x02\x34\x0a
+# [tmux] switch/select window 5 (Prefix(Ctrl + b) + 5)
+keybind = command+five=text:\x02\x35\x0a
+# [tmux] switch/select window 6 (Prefix(Ctrl + b) + 6)
+keybind = command+six=text:\x02\x36\x0a
+# [tmux] switch/select window 7 (Prefix(Ctrl + b) + 7)
+keybind = command+seven=text:\x02\x37\x0a
+# [tmux] switch/select window 8 (Prefix(Ctrl + b) + 8)
+keybind = command+eight=text:\x02\x38\x0a
+# [tmux] switch/select window 9 (Prefix(Ctrl + b) + 9)
+keybind = command+nine=text:\x02\x39\x0a
+
+# [tmux] next window (Prefix(Ctrl + b) + n)
+keybind = command+shift+right=text:\x02\x6e
+# [tmux] previous window (Prefix(Ctrl + b) + p)
+keybind = command+shift+left=text:\x02\x70
+
+# [tmux] split vertically (Prefix(Ctrl + b) + \)
+keybind = command+backslash=text:\x02\x5c\x0a
+# [tmux] split horizontally (Prefix(Ctrl + b) + -)
+keybind = command+option+backslash=text:\x02\x2d\x0a
+
+# [tmux] create window (Prefix(Ctrl + b) + c)
+keybind = command+t=text:\x02\x63
+# [tmux] close current pane and window if last pane (Prefix(Ctrl + b) + x)
+keybind = command+w=text:\x02\x78
+
+# [tmux] navigate to the up panel (Prefix(Ctrl + b) + up)
+keybind = command+up=text:\x02\x1b\x5b\x41
+# [tmux] navigate to the down panel (Prefix(Ctrl + b) + down)
+keybind = command+down=text:\x02\x1b\x5b\x42
+# [tmux] navigate to the right panel (Prefix(Ctrl + b) + right)
+keybind = command+right=text:\x02\x1b\x5b\x43
+# [tmux] navigate to the left panel (Prefix(Ctrl + b) + left)
+keybind = command+left=text:\x02\x1b\x5b\x44
+
+# [tmux] rename session (Prefix(Ctrl + b) + $)
+keybind = command+period=text:\x02\x24\x0a
+# [tmux] rename window (Prefix(Ctrl + b) + ,)
+keybind = command+comma=text:\x02\x2c\x0a
+# [tmux] see session tree (Prefix(Ctrl + b) + j)
+keybind = command+j=text:\x02\x6a\x0a
+# [tmux] toggle zoom of current pane (Prefix(Ctrl + b) + z)
+keybind = command+z=text:\x02\x7a
+# [tmux] detach from session (Prefix(Ctrl + b) + d)
+keybind = command+d=text:\x02\x64\x0a
+# [tmux] reload configuration (Prefix(Ctrl + b) + r)
+keybind = command+r=text:\x02\x72\x0a
+# [tmux] copy mode window (Prefix(Ctrl + b) + [)
+keybind = command+left_bracket=text:\x02\x5b\x0a
+
+# padding
+window-padding-x = 16
+window-padding-y = 8
