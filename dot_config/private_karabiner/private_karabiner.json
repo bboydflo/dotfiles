@@ -1,0 +1,199 @@
+{
+  "global": {
+    "check_for_updates_on_startup": true,
+    "show_in_menu_bar": true,
+    "show_profile_name_in_menu_bar": false
+  },
+  "profiles": [
+    {
+      "name": "default",
+      "selected": true,
+      "virtual_hid_keyboard": {
+        "keyboard_type_v2": "iso"
+      },
+      "complex_modifications": {
+        "rules": [
+          {
+            "description": "Caps Lock → Hyper",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "caps_lock"
+                },
+                "to": [
+                  {
+                    "key_code": "left_command",
+                    "modifiers": [
+                      "option",
+                      "control",
+                      "shift"
+                    ]
+                  }
+                ],
+                "to_if_alone": [
+                  {
+                    "key_code": "caps_lock"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Layer - launch-app",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "l"
+                },
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "launch-app",
+                      "value": 1
+                    }
+                  },
+                  {
+                    "set_variable": {
+                      "name": "__layer",
+                      "value": 1
+                    }
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_unless",
+                    "name": "launch-app",
+                    "value": 1
+                  },
+                  {
+                    "type": "variable_unless",
+                    "name": "__layer",
+                    "value": 1
+                  }
+                ],
+                "to_if_alone": [
+                  {
+                    "key_code": "l"
+                  }
+                ],
+                "to_after_key_up": [
+                  {
+                    "set_variable": {
+                      "name": "launch-app",
+                      "value": 0
+                    }
+                  },
+                  {
+                    "set_variable": {
+                      "name": "__layer",
+                      "value": 0
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "b"
+                },
+                "to": [
+                  {
+                    "shell_command": "open -a \"Firefox\".app"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "launch-app",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "f"
+                },
+                "to": [
+                  {
+                    "shell_command": "open -a \"Finder\".app"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "launch-app",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "t"
+                },
+                "to": [
+                  {
+                    "shell_command": "open -a \"Ghostty\".app"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "launch-app",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "c"
+                },
+                "to": [
+                  {
+                    "shell_command": "open -a \"Microsoft Teams\".app"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "launch-app",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "m"
+                },
+                "to": [
+                  {
+                    "shell_command": "open -a \"Microsoft Outlook.\".app"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "launch-app",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "parameters": {
+          "basic.to_if_alone_timeout_milliseconds": 1000,
+          "basic.to_if_held_down_threshold_milliseconds": 500,
+          "basic.to_delayed_action_delay_milliseconds": 500,
+          "basic.simultaneous_threshold_milliseconds": 50,
+          "mouse_motion_to_scroll.speed": 100
+        }
+      }
+    }
+  ]
+}

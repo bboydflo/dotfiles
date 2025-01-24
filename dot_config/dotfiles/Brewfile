@@ -48,6 +48,7 @@ cask "webtorrent"
 cask "git-credential-manager"
 cask 'qlmarkdown'
 cask 'quicklook-json'
+cask 'karabiner-elements'
 
 # Mac App Store
 # https://apps.apple.com/dk/app/hidden-bar/id1452453066?mt=12
