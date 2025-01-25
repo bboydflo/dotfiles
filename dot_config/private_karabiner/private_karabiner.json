@@ -1,16 +1,6 @@
 {
-  "global": {
-    "check_for_updates_on_startup": true,
-    "show_in_menu_bar": true,
-    "show_profile_name_in_menu_bar": false
-  },
   "profiles": [
     {
-      "name": "default",
-      "selected": true,
-      "virtual_hid_keyboard": {
-        "keyboard_type_v2": "iso"
-      },
       "complex_modifications": {
         "rules": [
           {
@@ -182,6 +172,250 @@
                     "value": 1
                   }
                 ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "comma"
+                },
+                "to": [
+                  {
+                    "shell_command": "open -a \"System Settings\".app"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "launch-app",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Imported from /Users/dkFloOnc/development/karabiner-config/src/third-party-rules/auto-close-brackets-quotes.json",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "9",
+                  "modifiers": {
+                    "mandatory": [
+                      "shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "9",
+                    "modifiers": [
+                      "shift"
+                    ]
+                  },
+                  {
+                    "key_code": "0",
+                    "modifiers": [
+                      "shift"
+                    ]
+                  },
+                  {
+                    "key_code": "left_arrow"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "quote"
+                },
+                "to": [
+                  {
+                    "key_code": "quote"
+                  },
+                  {
+                    "key_code": "quote"
+                  },
+                  {
+                    "key_code": "left_arrow"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "quote",
+                  "modifiers": {
+                    "mandatory": [
+                      "shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "quote",
+                    "modifiers": [
+                      "shift"
+                    ]
+                  },
+                  {
+                    "key_code": "quote",
+                    "modifiers": [
+                      "shift"
+                    ]
+                  },
+                  {
+                    "key_code": "left_arrow"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "grave_accent_and_tilde"
+                },
+                "to": [
+                  {
+                    "key_code": "grave_accent_and_tilde"
+                  },
+                  {
+                    "key_code": "grave_accent_and_tilde"
+                  },
+                  {
+                    "key_code": "left_arrow"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "open_bracket"
+                },
+                "to": [
+                  {
+                    "key_code": "open_bracket"
+                  },
+                  {
+                    "key_code": "close_bracket"
+                  },
+                  {
+                    "key_code": "left_arrow"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "open_bracket",
+                  "modifiers": {
+                    "mandatory": [
+                      "shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "open_bracket",
+                    "modifiers": [
+                      "shift"
+                    ]
+                  },
+                  {
+                    "key_code": "close_bracket",
+                    "modifiers": [
+                      "shift"
+                    ]
+                  },
+                  {
+                    "key_code": "left_arrow"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "open_bracket",
+                  "modifiers": {
+                    "mandatory": [
+                      "option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "open_bracket",
+                    "modifiers": [
+                      "option"
+                    ]
+                  },
+                  {
+                    "key_code": "open_bracket",
+                    "modifiers": [
+                      "option",
+                      "shift"
+                    ]
+                  },
+                  {
+                    "key_code": "left_arrow"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "close_bracket",
+                  "modifiers": {
+                    "mandatory": [
+                      "option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "close_bracket",
+                    "modifiers": [
+                      "option"
+                    ]
+                  },
+                  {
+                    "key_code": "close_bracket",
+                    "modifiers": [
+                      "option",
+                      "shift"
+                    ]
+                  },
+                  {
+                    "key_code": "left_arrow"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "comma",
+                  "modifiers": {
+                    "mandatory": [
+                      "shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "comma",
+                    "modifiers": [
+                      "shift"
+                    ]
+                  },
+                  {
+                    "key_code": "period",
+                    "modifiers": [
+                      "shift"
+                    ]
+                  },
+                  {
+                    "key_code": "left_arrow"
+                  }
+                ]
               }
             ]
           }
@@ -193,6 +427,11 @@
           "basic.simultaneous_threshold_milliseconds": 50,
           "mouse_motion_to_scroll.speed": 100
         }
+      },
+      "name": "default",
+      "selected": true,
+      "virtual_hid_keyboard": {
+        "keyboard_type_v2": "iso"
       }
     }
   ]
