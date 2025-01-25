@@ -30,6 +30,25 @@
             ]
           },
           {
+            "description": "Cmd → Cmd+Tab",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "left_command"
+                },
+                "to_if_alone": [
+                  {
+                    "key_code": "tab",
+                    "modifiers": [
+                      "left_command"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
             "description": "Layer - launch-app",
             "manipulators": [
               {

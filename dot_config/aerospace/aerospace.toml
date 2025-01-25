@@ -44,11 +44,6 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 # Also see: https://nikitabobko.github.io/AeroSpace/goodies#disable-hide-app
 automatically-unhide-macos-hidden-apps = true
 
-# Disable annoying and useless "hide application" shortcut
-# https://nikitabobko.github.io/AeroSpace/goodies#disable-hide-app
-cmd-h = [] # Disable "hide application"
-cmd-alt-h = [] # Disable "hide others"
-
 # Possible values: (qwerty|dvorak)
 # See https://nikitabobko.github.io/AeroSpace/guide#key-mapping
 [key-mapping]
@@ -102,6 +97,10 @@ cmd-alt-h = [] # Disable "hide others"
     # end tell'
     # '''
 
+    # Disable annoying and useless "hide application" shortcut
+    # https://nikitabobko.github.io/AeroSpace/goodies#disable-hide-app
+    cmd-h = [] # Disable "hide application"
+    cmd-alt-h = [] # Disable "hide others"
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#focus
     alt-h = 'focus left'
@@ -122,8 +121,8 @@ cmd-alt-h = [] # Disable "hide others"
     alt-b = 'workspace b' # browser
     alt-c = 'workspace c' # chat
     alt-f = 'workspace f' # file explorer
-    alt-t = 'workspace t' # terminal
     alt-m = 'workspace m' # mail
+    alt-t = 'workspace t' # terminal
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
     alt-shift-1 = 'move-node-to-workspace 1'
@@ -132,7 +131,7 @@ cmd-alt-h = [] # Disable "hide others"
     alt-shift-4 = 'move-node-to-workspace 4'
     alt-shift-5 = 'move-node-to-workspace 5'
     alt-shift-b = 'move-node-to-workspace b' # browser
-    alt-shift-c = 'move-node-to-workspace b' # chat
+    alt-shift-c = 'move-node-to-workspace c' # chat
     alt-shift-f = 'move-node-to-workspace f' # file explorer
     alt-shift-m = 'move-node-to-workspace m' # mail
     alt-shift-t = 'move-node-to-workspace t' # terminal
