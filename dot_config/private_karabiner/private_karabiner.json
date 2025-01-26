@@ -30,6 +30,239 @@
             ]
           },
           {
+            "description": "Window Management",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "up_arrow",
+                  "modifiers": {
+                    "mandatory": [
+                      "command",
+                      "option",
+                      "control",
+                      "shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open -g raycast://extensions/raycast/window-management/previous-display"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "down_arrow",
+                  "modifiers": {
+                    "mandatory": [
+                      "command",
+                      "option",
+                      "control",
+                      "shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open -g raycast://extensions/raycast/window-management/next-display"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "left_arrow",
+                  "modifiers": {
+                    "mandatory": [
+                      "command",
+                      "option",
+                      "control",
+                      "shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open -g raycast://extensions/raycast/window-management/previous-desktop"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "right_arrow",
+                  "modifiers": {
+                    "mandatory": [
+                      "command",
+                      "option",
+                      "control",
+                      "shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open -g raycast://extensions/raycast/window-management/next-desktop"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "return_or_enter",
+                  "modifiers": {
+                    "mandatory": [
+                      "command",
+                      "option",
+                      "control",
+                      "shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open -g raycast://extensions/raycast/window-management/maximize"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "0",
+                  "modifiers": {
+                    "mandatory": [
+                      "command",
+                      "option",
+                      "control",
+                      "shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open -g raycast://extensions/raycast/window-management/right-half"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "1",
+                  "modifiers": {
+                    "mandatory": [
+                      "command",
+                      "option",
+                      "control",
+                      "shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open -g raycast://extensions/raycast/window-management/first-third"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "2",
+                  "modifiers": {
+                    "mandatory": [
+                      "command",
+                      "option",
+                      "control",
+                      "shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open -g raycast://extensions/raycast/window-management/center-third"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "3",
+                  "modifiers": {
+                    "mandatory": [
+                      "command",
+                      "option",
+                      "control",
+                      "shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open -g raycast://extensions/raycast/window-management/last-third"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "4",
+                  "modifiers": {
+                    "mandatory": [
+                      "command",
+                      "option",
+                      "control",
+                      "shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open -g raycast://extensions/raycast/window-management/first-two-thirds"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "5",
+                  "modifiers": {
+                    "mandatory": [
+                      "command",
+                      "option",
+                      "control",
+                      "shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open -g raycast://extensions/raycast/window-management/last-two-thirds"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "9",
+                  "modifiers": {
+                    "mandatory": [
+                      "command",
+                      "option",
+                      "control",
+                      "shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open -g raycast://extensions/raycast/window-management/left-half"
+                  }
+                ]
+              }
+            ]
+          },
+          {
             "description": "Layer - launch-app",
             "manipulators": [
               {
@@ -162,7 +395,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "open -a \"Microsoft Outlook.\".app"
+                    "shell_command": "open -a \"Microsoft Outlook\".app"
                   }
                 ],
                 "conditions": [
