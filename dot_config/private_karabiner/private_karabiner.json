@@ -284,6 +284,82 @@
                     "shell_command": "open -g raycast://extensions/raycast/window-management/left-half"
                   }
                 ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "h",
+                  "modifiers": {
+                    "mandatory": [
+                      "command",
+                      "option",
+                      "control",
+                      "shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open -g raycast://extensions/raycast/window-management/left-half"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "l",
+                  "modifiers": {
+                    "mandatory": [
+                      "command",
+                      "option",
+                      "control",
+                      "shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open -g raycast://extensions/raycast/window-management/right-half"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "j",
+                  "modifiers": {
+                    "mandatory": [
+                      "command",
+                      "option",
+                      "control",
+                      "shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open -g raycast://extensions/raycast/window-management/bottom-half"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "k",
+                  "modifiers": {
+                    "mandatory": [
+                      "command",
+                      "option",
+                      "control",
+                      "shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open -g raycast://extensions/raycast/window-management/top-half"
+                  }
+                ]
               }
             ]
           },
@@ -374,17 +450,25 @@
             ]
           },
           {
-            "description": "Layer - launch-app",
+            "description": "Open Apps",
             "manipulators": [
               {
                 "type": "basic",
                 "from": {
-                  "key_code": "l"
+                  "key_code": "o",
+                  "modifiers": {
+                    "mandatory": [
+                      "command",
+                      "option",
+                      "control",
+                      "shift"
+                    ]
+                  }
                 },
                 "to": [
                   {
                     "set_variable": {
-                      "name": "launch-app",
+                      "name": "layer-o",
                       "value": 1
                     }
                   },
@@ -393,12 +477,18 @@
                       "name": "__layer",
                       "value": 1
                     }
+                  },
+                  {
+                    "set_notification_message": {
+                      "id": "layer-layer-o",
+                      "text": "Open apps:\nb(browser - Firefox), c(chat - MS Teams), e(editor - VS Code),\nf(file explorer - Finder), t(terminal - Ghostty), m(mail - MS Outlook),\n\",\"(System Settings)"
+                    }
                   }
                 ],
                 "conditions": [
                   {
                     "type": "variable_unless",
-                    "name": "launch-app",
+                    "name": "layer-o",
                     "value": 1
                   },
                   {
@@ -406,16 +496,25 @@
                     "name": "__layer",
                     "value": 1
                   }
-                ],
-                "to_if_alone": [
-                  {
-                    "key_code": "l"
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "b",
+                  "modifiers": {
+                    "mandatory": [
+                      "any"
+                    ]
                   }
-                ],
-                "to_after_key_up": [
+                },
+                "to": [
+                  {
+                    "shell_command": "open -a \"Firefox\".app"
+                  },
                   {
                     "set_variable": {
-                      "name": "launch-app",
+                      "name": "layer-o",
                       "value": 0
                     }
                   },
@@ -424,23 +523,18 @@
                       "name": "__layer",
                       "value": 0
                     }
-                  }
-                ]
-              },
-              {
-                "type": "basic",
-                "from": {
-                  "key_code": "b"
-                },
-                "to": [
+                  },
                   {
-                    "shell_command": "open -a \"Firefox\".app"
+                    "set_notification_message": {
+                      "id": "layer-layer-o",
+                      "text": ""
+                    }
                   }
                 ],
                 "conditions": [
                   {
                     "type": "variable_if",
-                    "name": "launch-app",
+                    "name": "layer-o",
                     "value": 1
                   }
                 ]
@@ -448,53 +542,40 @@
               {
                 "type": "basic",
                 "from": {
-                  "key_code": "f"
-                },
-                "to": [
-                  {
-                    "shell_command": "open -a \"Finder\".app"
+                  "key_code": "c",
+                  "modifiers": {
+                    "mandatory": [
+                      "any"
+                    ]
                   }
-                ],
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "launch-app",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "type": "basic",
-                "from": {
-                  "key_code": "t"
-                },
-                "to": [
-                  {
-                    "shell_command": "open -a \"Ghostty\".app"
-                  }
-                ],
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "launch-app",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "type": "basic",
-                "from": {
-                  "key_code": "c"
                 },
                 "to": [
                   {
                     "shell_command": "open -a \"Microsoft Teams\".app"
+                  },
+                  {
+                    "set_variable": {
+                      "name": "layer-o",
+                      "value": 0
+                    }
+                  },
+                  {
+                    "set_variable": {
+                      "name": "__layer",
+                      "value": 0
+                    }
+                  },
+                  {
+                    "set_notification_message": {
+                      "id": "layer-layer-o",
+                      "text": ""
+                    }
                   }
                 ],
                 "conditions": [
                   {
                     "type": "variable_if",
-                    "name": "launch-app",
+                    "name": "layer-o",
                     "value": 1
                   }
                 ]
@@ -502,17 +583,163 @@
               {
                 "type": "basic",
                 "from": {
-                  "key_code": "m"
+                  "key_code": "e",
+                  "modifiers": {
+                    "mandatory": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open -a \"Visual Studio Code\".app"
+                  },
+                  {
+                    "set_variable": {
+                      "name": "layer-o",
+                      "value": 0
+                    }
+                  },
+                  {
+                    "set_variable": {
+                      "name": "__layer",
+                      "value": 0
+                    }
+                  },
+                  {
+                    "set_notification_message": {
+                      "id": "layer-layer-o",
+                      "text": ""
+                    }
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "layer-o",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "f",
+                  "modifiers": {
+                    "mandatory": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open -a \"Finder\".app"
+                  },
+                  {
+                    "set_variable": {
+                      "name": "layer-o",
+                      "value": 0
+                    }
+                  },
+                  {
+                    "set_variable": {
+                      "name": "__layer",
+                      "value": 0
+                    }
+                  },
+                  {
+                    "set_notification_message": {
+                      "id": "layer-layer-o",
+                      "text": ""
+                    }
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "layer-o",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "t",
+                  "modifiers": {
+                    "mandatory": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open -a \"Ghostty\".app"
+                  },
+                  {
+                    "set_variable": {
+                      "name": "layer-o",
+                      "value": 0
+                    }
+                  },
+                  {
+                    "set_variable": {
+                      "name": "__layer",
+                      "value": 0
+                    }
+                  },
+                  {
+                    "set_notification_message": {
+                      "id": "layer-layer-o",
+                      "text": ""
+                    }
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "layer-o",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "m",
+                  "modifiers": {
+                    "mandatory": [
+                      "any"
+                    ]
+                  }
                 },
                 "to": [
                   {
                     "shell_command": "open -a \"Microsoft Outlook\".app"
+                  },
+                  {
+                    "set_variable": {
+                      "name": "layer-o",
+                      "value": 0
+                    }
+                  },
+                  {
+                    "set_variable": {
+                      "name": "__layer",
+                      "value": 0
+                    }
+                  },
+                  {
+                    "set_notification_message": {
+                      "id": "layer-layer-o",
+                      "text": ""
+                    }
                   }
                 ],
                 "conditions": [
                   {
                     "type": "variable_if",
-                    "name": "launch-app",
+                    "name": "layer-o",
                     "value": 1
                   }
                 ]
@@ -520,18 +747,117 @@
               {
                 "type": "basic",
                 "from": {
-                  "key_code": "comma"
+                  "key_code": "comma",
+                  "modifiers": {
+                    "mandatory": [
+                      "any"
+                    ]
+                  }
                 },
                 "to": [
                   {
                     "shell_command": "open -a \"System Settings\".app"
+                  },
+                  {
+                    "set_variable": {
+                      "name": "layer-o",
+                      "value": 0
+                    }
+                  },
+                  {
+                    "set_variable": {
+                      "name": "__layer",
+                      "value": 0
+                    }
+                  },
+                  {
+                    "set_notification_message": {
+                      "id": "layer-layer-o",
+                      "text": ""
+                    }
                   }
                 ],
                 "conditions": [
                   {
                     "type": "variable_if",
-                    "name": "launch-app",
+                    "name": "layer-o",
                     "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "escape",
+                  "modifiers": {
+                    "mandatory": [
+                      "any"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "layer-o",
+                    "value": 1
+                  }
+                ],
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "layer-o",
+                      "value": 0
+                    }
+                  },
+                  {
+                    "set_variable": {
+                      "name": "__layer",
+                      "value": 0
+                    }
+                  },
+                  {
+                    "set_notification_message": {
+                      "id": "layer-layer-o",
+                      "text": ""
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "caps_lock",
+                  "modifiers": {
+                    "mandatory": [
+                      "any"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "layer-o",
+                    "value": 1
+                  }
+                ],
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "layer-o",
+                      "value": 0
+                    }
+                  },
+                  {
+                    "set_variable": {
+                      "name": "__layer",
+                      "value": 0
+                    }
+                  },
+                  {
+                    "set_notification_message": {
+                      "id": "layer-layer-o",
+                      "text": ""
+                    }
                   }
                 ]
               }
@@ -566,6 +892,16 @@
                   {
                     "key_code": "left_arrow"
                   }
+                ],
+                "conditions": [
+                  {
+                    "input_sources": [
+                      {
+                        "language": "en"
+                      }
+                    ],
+                    "type": "input_source_if"
+                  }
                 ]
               },
               {
@@ -582,6 +918,16 @@
                   },
                   {
                     "key_code": "left_arrow"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "input_sources": [
+                      {
+                        "language": "en"
+                      }
+                    ],
+                    "type": "input_source_if"
                   }
                 ]
               },
@@ -611,6 +957,16 @@
                   {
                     "key_code": "left_arrow"
                   }
+                ],
+                "conditions": [
+                  {
+                    "input_sources": [
+                      {
+                        "language": "en"
+                      }
+                    ],
+                    "type": "input_source_if"
+                  }
                 ]
               },
               {
@@ -628,6 +984,16 @@
                   {
                     "key_code": "left_arrow"
                   }
+                ],
+                "conditions": [
+                  {
+                    "input_sources": [
+                      {
+                        "language": "en"
+                      }
+                    ],
+                    "type": "input_source_if"
+                  }
                 ]
               },
               {
@@ -644,6 +1010,16 @@
                   },
                   {
                     "key_code": "left_arrow"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "input_sources": [
+                      {
+                        "language": "en"
+                      }
+                    ],
+                    "type": "input_source_if"
                   }
                 ]
               },
@@ -673,6 +1049,16 @@
                   {
                     "key_code": "left_arrow"
                   }
+                ],
+                "conditions": [
+                  {
+                    "input_sources": [
+                      {
+                        "language": "en"
+                      }
+                    ],
+                    "type": "input_source_if"
+                  }
                 ]
               },
               {
@@ -701,6 +1087,16 @@
                   },
                   {
                     "key_code": "left_arrow"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "input_sources": [
+                      {
+                        "language": "en"
+                      }
+                    ],
+                    "type": "input_source_if"
                   }
                 ]
               },
@@ -731,6 +1127,16 @@
                   {
                     "key_code": "left_arrow"
                   }
+                ],
+                "conditions": [
+                  {
+                    "input_sources": [
+                      {
+                        "language": "en"
+                      }
+                    ],
+                    "type": "input_source_if"
+                  }
                 ]
               },
               {
@@ -758,6 +1164,16 @@
                   },
                   {
                     "key_code": "left_arrow"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "input_sources": [
+                      {
+                        "language": "en"
+                      }
+                    ],
+                    "type": "input_source_if"
                   }
                 ]
               }
