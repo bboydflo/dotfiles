@@ -1,4 +1,4 @@
-# Getting started with chezmoi
+# Getting started with [chezmoi](https://www.chezmoi.io/)
 
 Generate a new public and private SSH key by running:
 
